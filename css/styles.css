@@ -85,29 +85,6 @@ a {
   z-index: -1;
 }
 
-.modal {
-  margin: auto;
-  cursor: default;
-  background-color: white;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 528px;
-  height: 581px;
-  position: relative;
-}
-
-.modal-button {
-  position: absolute;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  background-color: white;
-}
-
 .wrapper-social {
   margin: 0;
   display: flex;
@@ -321,24 +298,27 @@ a {
   margin-left: 78px;
 }
 
+.newsletter {
+  display: flex;
+}
+
 .newsletter-input {
   padding-left: 16px;
   width: 358px;
   height: 50px;
   color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   letter-spacing: 0.03em;
   line-height: 1.25;
   font-size: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .newsletter-submit {
   display: inline-flex;
-  padding: 0;
-  margin-left: 5px;
+  margin-left: 12px;
   background-color: var(--brand-color);
   color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -354,21 +334,6 @@ a {
 
 .newsletter-submit-icon {
   margin-left: 24px;
-}
-
-.modal-header {
-  font-size: 20px;
-  justify-content: center;
-}
-
-.modal-form-label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
-}
-
-.modal-form-input {
-  padding: 5px;
 }
 
 .footer-social-header {
@@ -409,6 +374,134 @@ a {
 /* ====================================================================*/
 /* ========== INDEX.HTML PAGE ==========================================*/
 /* =============================================================== */
+
+.modal {
+  margin: auto;
+  cursor: default;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  /* width: 528px;
+  height: 581px; */
+}
+
+.modal-close-position {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-close {
+  padding: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.modal-header {
+  color: var(--black-text);
+  font-weight: 700;
+  font-size: 20px;
+  padding-block: 20px;
+  text-align: center;
+}
+
+.modal-form {
+  padding-inline: 40px;
+}
+
+.modal-form-fieldset {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 10px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--link-color);
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-input {
+  width: 90%;
+  margin-left: 15px;
+  border: none;
+}
+
+.modal-form-fieldset-comment {
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form-textarea {
+  border: none;
+  width: 100%;
+}
+
+.modal-form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-legal {
+  border: none;
+  display: flex;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.modal-form-checkbox {
+  margin-right: 7px;
+}
+
+.modal-form-checkbox-text {
+  color: var(--link-color);
+  line-height: 1.71;
+}
+
+.modal-form-checkbox-links {
+  text-decoration: underline;
+}
+
+.modal-form-submit-button {
+  background-color: var(--brand-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  margin-inline: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* .modal-form-icon {
+  position: absolute;
+  bottom: 23px;
+  left: 23px;
+} */
 
 .central-text {
   font-weight: 900;
