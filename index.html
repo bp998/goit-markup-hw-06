@@ -31,21 +31,31 @@
             <svg class="modal-form-icon" height="18" width="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
-            <input class="modal-form-input" type="text" name="name" />
+            <input class="modal-form-input" type="text" name="name" required />
           </fieldset>
           <label class="modal-form-label">Telefon</label>
           <fieldset class="modal-form-fieldset">
             <svg class="modal-form-icon" height="18" width="18">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
-            <input class="modal-form-input" type="tel" name="phone_number" />
+            <input
+              class="modal-form-input"
+              type="tel"
+              name="phone_number"
+              required
+            />
           </fieldset>
           <label class="modal-form-label">Email</label>
           <fieldset class="modal-form-fieldset">
             <svg class="modal-form-icon" height="18" width="18">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
-            <input class="modal-form-input" type="email" name="email" />
+            <input
+              class="modal-form-input"
+              type="email"
+              name="email"
+              required
+            />
           </fieldset>
           <label class="modal-form-label">Komentarz</label>
           <fieldset class="modal-form-fieldset-comment">
@@ -57,18 +67,22 @@
             ></textarea>
           </fieldset>
           <fieldset class="modal-form-legal">
-            <input
-              class="modal-form-checkbox"
-              type="checkbox"
-              name="legal_checkbox"
-            />
-            <p class="modal-form-checkbox-text">
-              Oświadczam iż akceptuję
-              <a class="modal-form-checkbox-links" href="#">Regulamin</a> i
-              <a class="modal-form-checkbox-links" href="#"
-                >Politykę Prywatności.</a
-              >
-            </p>
+            <label class="modal-form-legal-label">
+              <input
+                class="modal-form-checkbox"
+                type="checkbox"
+                name="legal_checkbox"
+                required
+              />
+              <p class="modal-form-checkbox-text">
+                Oświadczam iż akceptuję
+                <a class="modal-form-checkbox-links" href="#">Regulamin</a>
+                i
+                <a class="modal-form-checkbox-links" href="#">
+                  Politykę Prywatności.</a
+                >
+              </p>
+            </label>
           </fieldset>
           <button class="modal-form-submit-button" type="submit">Wyślij</button>
         </form>

@@ -382,8 +382,6 @@ a {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  /* width: 528px;
-  height: 581px; */
 }
 
 .modal-close-position {
@@ -406,12 +404,16 @@ a {
   color: var(--black-text);
   font-weight: 700;
   font-size: 20px;
-  padding-block: 20px;
+  padding-bottom: 12px;
   text-align: center;
 }
 
 .modal-form {
   padding-inline: 40px;
+}
+
+.modal-form-icon {
+  fill: currentColor;
 }
 
 .modal-form-fieldset {
@@ -425,6 +427,26 @@ a {
   align-items: center;
   padding: 0;
   padding-left: 15px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color, color;
+}
+
+.modal-form-fieldset-comment:hover,
+.modal-form-fieldset:hover,
+.modal-form-fieldset-comment:focus-within,
+.modal-form-fieldset:focus-within {
+  border-color: var(--brand-color);
+}
+
+.modal-form-fieldset:hover .modal-form-icon,
+.modal-form-fieldset:focus-within .modal-form-icon {
+  color: var(--brand-color);
+}
+
+.modal-form-fieldset-comment:focus-within .modal-form-textarea,
+.modal-form-fieldset:focus-within .modal-form-input {
+  outline: none;
 }
 
 .modal-form-label {
@@ -447,6 +469,9 @@ a {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
 }
 
 .modal-form-textarea {
@@ -463,14 +488,22 @@ a {
 
 .modal-form-legal {
   border: none;
-  display: flex;
   margin: 0;
   margin-top: 20px;
   padding: 0;
 }
 
 .modal-form-checkbox {
+  width: 16px;
+  height: 15px;
   margin-right: 7px;
+  background-color: var(--brand-color);
+  border-radius: 2px;
+}
+
+.modal-form-legal-label {
+  display: flex;
+  align-items: center;
 }
 
 .modal-form-checkbox-text {
@@ -480,6 +513,10 @@ a {
 
 .modal-form-checkbox-links {
   text-decoration: underline;
+}
+
+.modal-form-checkbox-links:visited {
+  color: var(--brand-color);
 }
 
 .modal-form-submit-button {
@@ -496,12 +533,6 @@ a {
   margin-top: 30px;
   margin-bottom: 40px;
 }
-
-/* .modal-form-icon {
-  position: absolute;
-  bottom: 23px;
-  left: 23px;
-} */
 
 .central-text {
   font-weight: 900;
