@@ -462,6 +462,7 @@ a {
 }
 
 .modal-form-input {
+  height: 100%;
   width: 90%;
   margin-left: 15px;
   border: none;
