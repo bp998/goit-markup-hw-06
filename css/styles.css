@@ -414,6 +414,9 @@ a {
 
 .modal-form-icon {
   fill: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .modal-form-fieldset {
@@ -493,17 +496,43 @@ a {
   padding: 0;
 }
 
+.modal-form-legal-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
 .modal-form-checkbox {
   width: 16px;
   height: 15px;
   margin-right: 7px;
-  background-color: var(--brand-color);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  display: block;
+  position: absolute;
+  background-image: url(../images/icons.svg#icon-icon-check);
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--black-text);
   border-radius: 2px;
 }
 
-.modal-form-legal-label {
-  display: flex;
-  align-items: center;
+.modal-form-legal-label:has(input:checked) .checkmark-checked {
+  opacity: 1;
+}
+
+.checkmark-checked {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  opacity: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity;
 }
 
 .modal-form-checkbox-text {
